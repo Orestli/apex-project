@@ -1,0 +1,21 @@
+{
+  "lang": "Англійська",
+  "Page is not found": "Сторінка не знайдена",
+  "something-went-wrong": "Щось пішло не так",
+  "reload-page": "Перезагрузити сторінку",
+  "toggle-sidebar": "Переключити",
+  "shorted-lang": "EN",
+  "main-page": "Головна",
+  "about-page": "Про сайт",
+  "sign-in": "Увійти",
+  "sign-out": "Вийти",
+  "increment": "Збільшити",
+  "decrement": "Зменшити",
+  "enter-login": "Введіть логін",
+  "enter-password": "Введіть пароль",
+  "auth-error": "Неправильний логін або пароль",
+  "profile-page": "Профіль",
+  "currency": "Валюта",
+  "country": "Країна",
+  "enter-comment-text": "Вкажіть текст коментаря"
+}

@@ -1,0 +1,21 @@
+{
+  "lang": "Ukrainian",
+  "page-is-not-found": "Page is not found",
+  "something-went-wrong": "Something went wrong",
+  "reload-page": "Reload page",
+  "toggle-sidebar": "Toggle",
+  "shorted-lang": "UK",
+  "main-page": "Main page",
+  "about-page": "About page",
+  "sign-in": "Sign In",
+  "sign-out": "Sign Out",
+  "increment": "Increment",
+  "decrement": "Decrement",
+  "enter-login": "Enter login",
+  "enter-password": "Enter password",
+  "auth-error": "Incorrect login or password",
+  "profile-page": "Profile page",
+  "currency": "Currency",
+  "country": "Country",
+  "enter-comment-text": "Enter comment text"
+}

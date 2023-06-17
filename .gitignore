@@ -1,0 +1,9 @@
+/build
+node_modules
+/storybook-static
+.loki/report.json
+.loki/report.html
+.idea
+yarn-error.log
+/reports/unit
+/coverage

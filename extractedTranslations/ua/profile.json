@@ -1,0 +1,19 @@
+{
+  "age": "age",
+  "an error occurred while loading the profile": "an error occurred while loading the profile",
+  "avatar": "avatar",
+  "cancel": "cancel",
+  "city": "city",
+  "date not specified": "date not specified",
+  "edit": "edit",
+  "firstname": "firstname",
+  "incorrect age": "incorrect age",
+  "incorrect country": "incorrect country",
+  "incorrect profile data": "incorrect profile data",
+  "lastname": "lastname",
+  "profile": "profile",
+  "save": "save",
+  "server error": "server error",
+  "try to reload page": "try to reload page",
+  "username": "username"
+}

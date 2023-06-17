@@ -1,0 +1,19 @@
+{
+  "profile": "Профіль",
+  "edit": "Редагувати",
+  "firstname": "Ім'я",
+  "lastname": "Прізвище",
+  "cancel": "Відмінити",
+  "save": "Зберегти",
+  "age": "Вік",
+  "city": "Місто",
+  "username": "Нікнейм",
+  "avatar": "Аватар",
+  "an-error-occurred-while-loading-the-profile": "Сталася помилка при загрузці профілю",
+  "try-to-reload-page": "Попробуйте перезагрузити сторінку",
+  "server-error": "Серверна помилка",
+  "incorrect-country": "Неправильна країна",
+  "date-not-specified": "Не вказана інформація",
+  "incorrect-profile-data": "Неправильно вказана інформація",
+  "incorrect-age": "Неправильний вік"
+}
