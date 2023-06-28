@@ -783,6 +783,9 @@
       "username": "admin",
       "password": "123",
       "roles": ["ADMIN"],
+      "features": {
+        "isArticleRatingEnabled": true
+      },
       "avatar": "https://avatars.githubusercontent.com/u/51513306?v=4"
     },
     {
@@ -790,6 +793,9 @@
       "username": "user",
       "password": "123",
       "roles": ["USER"],
+      "features": {
+        "isArticleRatingEnabled": false
+      },
       "avatar": "https://avatars.githubusercontent.com/u/51513305?v=4"
     },
     {
@@ -797,6 +803,9 @@
       "username": "manager",
       "password": "123",
       "roles": ["MANAGER"],
+      "features": {
+        "isArticleRatingEnabled": false
+      },
       "avatar": "https://avatars.githubusercontent.com/u/51513305?v=4"
     },
     {
@@ -804,6 +813,9 @@
       "username": "tester",
       "password": "tester",
       "roles": ["ADMIN"],
+      "features": {
+        "isArticleRatingEnabled": false
+      },
       "avatar": "https://avatars.githubusercontent.com/u/51513305?v=4"
     }
   ],

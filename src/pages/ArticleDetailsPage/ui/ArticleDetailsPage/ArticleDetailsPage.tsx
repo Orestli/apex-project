@@ -7,6 +7,7 @@ import { ArticleRecommendationsList } from '@/features/articleRecommendationsLis
 import DynamicModuleLoader, {
   type ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader';
+import { getFeatureFlag } from '@/shared/lib/features';
 import { VStack } from '@/shared/ui/Stack';
 import { Page } from '@/widgets/Page';
 
@@ -24,6 +25,7 @@ interface Props {
 
 const ArticleDetailsPage: React.FC<Props> = ({ className }) => {
   const { id } = useParams();
+  const isArticleRatingEnabled = getFeatureFlag('isArticleRatingEnabled');
 
   if (!id) {
     return null;
@@ -35,7 +37,7 @@ const ArticleDetailsPage: React.FC<Props> = ({ className }) => {
         <VStack gap="16" max>
           <ArticleDetailsPageHeader />
           <ArticleDetails id={id} />
-          <ArticleRating articleId={id} />
+          {isArticleRatingEnabled && <ArticleRating articleId={id} />}
           <ArticleRecommendationsList />
           <ArticleDetailsComments id={id} />
         </VStack>
