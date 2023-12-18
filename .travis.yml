@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - 16
+cache: yarn
+install:
+  - yarn install
+
+jobs:
+  include:
+    - stage: "Checks"
+      name: "Linter Checks"
+      script:
+        - npm run lint:ts
+        - npm run lint:scss
+    - stage: "Tests"
+      name: "Unit Tests"
+      script:
+        - npm run test:unit
+
+notifications:
+  webhooks:
+    - https://discord.com/api/webhooks/1186432608834441286/Uqhm8xarAkauIvr1-YXqAlKaRnDSX41GpO_zAAlGpss5h3FAN9mOpaWrhbaujqfR8Vp1
