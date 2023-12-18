@@ -5,6 +5,10 @@ cache: yarn
 install:
   - yarn install
 
+stages:
+  - "Checks"
+  - "Tests"
+
 jobs:
   include:
     - stage: "Checks"
@@ -16,6 +20,7 @@ jobs:
       name: "Unit Tests"
       script:
         - npm run test:unit
+      if: env(PULL_REQUEST_APPROVED) = true
 
 notifications:
   webhooks:
