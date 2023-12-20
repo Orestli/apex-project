@@ -30,6 +30,12 @@ jobs:
         - yarn lint:ts
         - yarn lint:scss
 
+matrix:
+  fast_finish: true
+  include:
+    - stage: build-and-ui-testing
+    - stage: checks
+
 after_success:
   - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
   - chmod +x send.sh
