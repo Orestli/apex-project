@@ -24,7 +24,7 @@ interface Props
   theme?: ButtonTheme;
 }
 
-const Button: React.FC<Props> = (%{
+const Button: React.FC<Props> = ({
   className,
   theme = 'outline',
   size = 'size_m',
