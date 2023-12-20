@@ -18,6 +18,9 @@ env:
 install:
   - yarn install
 
+matrix:
+  fast_finish: true
+
 jobs:
   include:
     - stage: build-and-ui-testing
