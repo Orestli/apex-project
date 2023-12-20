@@ -1,0 +1,46 @@
+language: node_js
+node_js:
+  - 16
+
+branches:
+  only:
+    - main
+
+install:
+  - yarn install
+
+cache:
+  yarn: true
+  directories:
+    - "node_modules"
+
+jobs:
+  include:
+    - stage: build-and-ui-testing
+      name: "Build and UI testing"
+      script:
+        - yarn build:prod
+        - yarn storybook:build
+#        - yarn test:ui:ci
+#        - test:unit
+
+    - stage: checks
+      name: "Linting"
+      script:
+        - yarn lint:ts
+        - yarn lint:scss
+
+matrix:
+  fast_finish: true
+  include:
+    - stage: build-and-ui-testing
+    - stage: checks
+
+after_success:
+  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh success $DISCORD_WEBHOOK_URL
+after_failure:
+  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh failure $DISCORD_WEBHOOK_URL

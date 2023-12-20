@@ -29,7 +29,8 @@
     "storybook:build": "build-storybook -c ./config/storybook",
     "check-types": "tsc --noemit",
     "prepare": "husky install",
-    "generate:slice": "node ./scripts/createSlice/index.js"
+    "generate:slice": "node ./scripts/createSlice/index.js",
+    "test": "echo 'Hello, World!'"
   },
   "dependencies": {
     "@headlessui/react": "1.6.6",
