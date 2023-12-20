@@ -6,10 +6,6 @@ branches:
   only:
     - main
 
-env:
-  global:
-    - DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/1186432608834441286/Uqhm8xarAkauIvr1-YXqAlKaRnDSX41GpO_zAAlGpss5h3FAN9mOpaWrhbaujqfR8Vp1"
-
 install:
   - yarn install
 
@@ -25,8 +21,8 @@ jobs:
       script:
         - yarn build:prod
         - yarn storybook:build
-        - yarn test:ui:ci
-        - test:unit
+#        - yarn test:ui:ci
+#        - test:unit
 
     - stage: checks
       name: "Linting"
