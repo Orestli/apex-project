@@ -1,27 +1,34 @@
 language: node_js
 node_js:
   - 16
-cache: yarn
+
+cache:
+  yarn: true
+  directories:
+    - "node_modules"
+
+branches:
+  only:
+    - main
+
+env:
+  global:
+    - DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/1186432608834441286/Uqhm8xarAkauIvr1-YXqAlKaRnDSX41GpO_zAAlGpss5h3FAN9mOpaWrhbaujqfR8Vp1"
+
 install:
   - yarn install
 
-stages:
-  - "Checks"
-  - "Tests"
-
 jobs:
   include:
-    - stage: "Checks"
-      name: "Linter Checks"
+    - stage: build-and-ui-testing
+      name: "Build and UI testing"
       script:
-        - npm run lint:ts
-        - npm run lint:scss
-    - stage: "Tests"
-      name: "Unit Tests"
+        - yarn build:prod
+        - yarn storybook:build
+        - yarn test:ui:ci
+        - test:unit
+    - stage: checks
+      name: "Linting"
       script:
-        - npm run test:unit
-      if: env(PULL_REQUEST_APPROVED) = true
-
-notifications:
-  webhooks:
-    - https://discord.com/api/webhooks/1186432608834441286/Uqhm8xarAkauIvr1-YXqAlKaRnDSX41GpO_zAAlGpss5h3FAN9mOpaWrhbaujqfR8Vp1
+        - yarn lint:ts
+        - yarn lint:scss
